@@ -333,15 +333,43 @@ const data = {
 
   function displayImages() {
     for(let i=0; i< data.artObjects.length; i++) {
-      const image = document.createElement("img")
+    const image = document.createElement("img")
     image.classList.add("artObject")
     image.src = data.artObjects[i].webImage.url
     image.alt = data.artObjects[i].title   
+    
     const a = document.createElement("a")
     a.href = "./pages/detail-page.html"
     a.appendChild(image)
     // console.log(a)
+    // if(checkName(data.artObjects[i])) {
+    //   a.style.visibility = "hidden"
+    // }
     const gallery = document.getElementById("gallery")
     gallery.appendChild(a)
     }
   }
+
+
+function checkName(Inpval) {
+  let n = artObject.principalOrFirstMaker
+  if(n.search(painterName) === -1) {
+    return true
+  } else {
+    return false
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('form');
+  // console.log('here is my form', form);
+  form.addEventListener('submit', formSubmit);
+})
+
+function formSubmit(e) {
+  e.preventDefault()
+  console.log("Hello from handle click")
+  const Inpval = document.getElementById("painterInput").value
+  console.log(Inpval)
+}
+
