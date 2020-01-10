@@ -6,25 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Details Page</title>
     <link rel="stylesheet" href="" type="text/css">
+    <script src="detail-page.js"></script>
 </head>
 <body>
     <h3>Dilip's Meuseum App</h3>
     <h2>Name of the Picture</h2>
     <img src="http://www.alma-art.it/2014/Alma-art%20270.jpg" alt="">
-    <div class="comments">
+    <section id="comments">
         <h2>Comments</h2>
-        <div class="comment">
-            <h3>You said:</h3>
-            <q>This is the best picture ever!!</q>
+        <section class="comment">
+          <h3>Arien said:</h3>
+          <p>"This is definitely one of my favorites!"</p>
+        </section>
+      </section>
+      <form onsubmit="submitComment(); return true">
+        <div class="formSection">
+          <label for="name">Name:</label>
+          <input type="text" id="name" />
         </div>
-    </div>
-    <form action="">
-        <label for="Name">Name</label>
-        <input type="text" name="" id="">
-        <label for="Message">Message</label>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <button type="submit">Post your comment</button>
-    </form>
+        <div class="formSection">
+          <label for="msg">Message:</label>
+          <textarea id="msg"></textarea>
+        </div>
+        <div class="button">
+          <button type="default">Post your comment</button>
+        </div>
+      </form>
     <footer>
         <p>Made at Codaisseur</p>
     </footer>
