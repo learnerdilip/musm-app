@@ -1,0 +1,15 @@
+body {
+  text-align: center;
+  background-color: burlywood;
+}
+
+.comment {
+  border: solid black 2px;
+  border-radius: 5px;
+  margin: 5px 20%;
+}
+
+img {
+  width: 75vw;
+  height: auto;
+}
