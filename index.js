@@ -328,3 +328,10 @@ const data = {
   for(let i=0; i<paintings.length; i++) {
     console.log(data.artObjects )
   }
+
+  window.onload = displayImages
+
+  function displayImages() {
+    const gallery = document.getElementById("gallery")
+    
+  }
