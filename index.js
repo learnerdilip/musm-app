@@ -332,6 +332,16 @@ const data = {
   window.onload = displayImages
 
   function displayImages() {
+    for(let i=0; i< data.artObjects.length; i++) {
+      const image = document.createElement("img")
+    image.classList.add("artObject")
+    image.src = data.artObjects[i].webImage.url
+    image.alt = data.artObjects[i].title   
+    const a = document.createElement("a")
+    a.href = "./pages/detail-page.html"
+    a.appendChild(image)
+    // console.log(a)
     const gallery = document.getElementById("gallery")
-    
+    gallery.appendChild(a)
+    }
   }
