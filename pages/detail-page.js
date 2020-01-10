@@ -5,9 +5,9 @@ function submitComment() {
     const msg = textArea.value
 
     const passed = doesNotPassAllValidations(name, msg)
-if (passed) {
-    return null
-}
+        if (passed) {
+            return null
+    }
     const comment = document.createElement('section')
     const h3 = document.createElement('h3')
     const p = document.createElement('p')
